@@ -37,10 +37,16 @@ class Action extends React.Component {
     );
   }
 }
+// we have access to this.props.options inside the render() as render() is not an event handler but we do not have access to this.props .options inside handleRemoveAll() function as it loses the "this" binding oz its an event handler so to prevent this we are going to overide the constructor function by adding the line - this.handleRemoveAll = this.handleRemoveAll.bind(this); 
+
 
 class Options extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  }
   handleRemoveAll() {
-    alert('remove all')
+    alert('remove all');
   }
   render(){
     return (
