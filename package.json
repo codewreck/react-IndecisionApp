@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "livereload public/ -p 8080",
-    "build": "webpack --watch",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
-  },
+    "serve": "livereload public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server --host 127.0.0.1 --port 8080"
+},
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,6 +20,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "validator": "^8.0.0",
-    "webpack": "^3.1.0"
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
